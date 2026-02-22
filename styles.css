@@ -243,3 +243,38 @@ code{font-family:var(--mono); background:#eef2f7; padding:2px 6px; border-radius
   .mRow__icon--phone::after, .mRow__icon--email::after, .mRow__icon--web::after{font-size:20px !important;}
 }
 
+@media (max-width: 860px){
+
+  /* Center the QR block */
+  .mQrBox{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* QR container: clean + no clipping issues */
+  .qr--mobile{
+    width: 210px !important;
+    height: 210px !important;
+    padding: 0 !important;          /* important */
+    border: none !important;
+    border-radius: 22px !important;
+    background: #fff !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08) !important;
+    overflow: hidden !important;     /* keeps it tidy */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* FORCE the generated QR (img/canvas) to fit the box */
+  #qrMobile img,
+  #qrMobile canvas{
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    display: block !important;
+  }
+}
+
